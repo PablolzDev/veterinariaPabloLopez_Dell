@@ -4,6 +4,7 @@ const pets = [
     name: "myke",
     age: 2, // 2020
     breed: "bulldog",
+    image: "https://th-thumbnailer.cdn-si-edu.com/ZIf6orrEhd8Hr4GAG3MYV2OKot8=/fit-in/1600x0/filters:focal(939x670:940x671)/https%3A%2F%2Ftf-cmsv2-smithsonianmag-media.s3.amazonaws.com%2Ffiler_public%2F5b%2Fc9%2F5bc97061-92f6-4430-8336-c634c91e9628%2F2560px-encontro_dog_institute_40130373460.jpg",
     species: "dog",
     weight: 30.2,
     status: "critical",
@@ -18,6 +19,7 @@ const pets = [
     name: "ramona",
     age: 6, // 2016
     breed: "bulldog",
+    image:"https://www.tiendanimal.es/articulos/wp-content/uploads/2020/11/El-Bulldog-ingl%C3%A9s-c%C3%B3mo-cuidarlo-1200x800.jpg",
     species: "dog",
     weight: 25.5,
     status: "stable",
@@ -32,6 +34,7 @@ const pets = [
     name: "thor",
     age: 10, // 2012
     breed: "britishShorthair",
+    image:"https://t1.uc.ltmcdn.com/es/posts/5/0/3/korat_53305_9_600.webp",
     species: "cat",
     weight: 6.8,
     status: "stable",
@@ -46,6 +49,7 @@ const pets = [
     name: "bella",
     age: 5, // 2017
     breed: "birmano",
+    image:"https://okdiario.com/img/2020/07/25/curiosidades-sobre-la-inteligencia-de-los-gatos-635x358.jpg",
     species: "cat",
     weight: 4.2,
     status: "stable",
@@ -60,6 +64,7 @@ const pets = [
     name: "pirulo",
     age: 1, // 2021
     breed: "chihuahua",
+    image:"https://caracol.com.co/resizer/v2/D627YQLQEBC27I5UQZ2Y44ZG5U.jpg?auth=342359cc2a7f8feeda6a0782ffdbaee21c8ee871bcebb97c5e87ef1b43f2483f&width=650&height=488&quality=70&smart=true",
     species: "dog",
     weight: 2.1,
     status: "critical",
@@ -75,6 +80,7 @@ const pets = [
     age: 4, // 2018
     breed: "chihuahua",
     species: "Dog",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEKnS_ibX0BsGFNRmBTv-kzYT4PmtCnD2eyjLxvUHNcQ&s",
     weight: 3.5,
     status: "stable",
     owner: {
@@ -88,6 +94,7 @@ const pets = [
     name: "mishi",
     age: 2, // 2020
     breed: "persian",
+    image:"https://cdn.shopify.com/s/files/1/1199/8502/files/persian-doll-face.jpg",
     species: "Cat",
     weight: 5.2,
     status: "stable",
@@ -102,6 +109,7 @@ const pets = [
     name: "rocky",
     age: 5, // 2017
     breed: "boxer",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOKfAKQ39jSv1ypjmMDRkgE4deI52IlsnVvri90v9rEQ&s",
     species: "Dog",
     weight: 28.7,
     status: "critical",
@@ -116,6 +124,7 @@ const pets = [
     name: "plumita",
     age: 1, // 2021
     breed: "canary",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMU98hycoqnv5N_MD7GS5zLv4ge3wO1ApM91m0Svnh7w&s",
     species: "Bird",
     weight: 0.1,
     status: "stable",
@@ -130,6 +139,7 @@ const pets = [
     name: "nemo",
     age: 0, // 2022
     breed: "clownfish",
+    image:"https://cdn0.bioenciclopedia.com/es/posts/1/7/1/pez_payaso_171_orig.jpg",
     species: "Fish",
     weight: 0.05,
     status: "stable",
@@ -141,6 +151,29 @@ const pets = [
     },
   },
 ];
+
+// Insercion de Cards
+const petss = document.querySelector('#ark');
+
+for (let i = 0; i < pets.length; i++) {
+    const pet = pets[i];
+    petss.innerHTML += `
+      <div class="col-md-3">
+          <div class="card h-100">
+              <img src="${pet.image}" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <h5 class="card-title">${pet.name}</h5>
+                  <p class="card-text">Age: ${pet.age}</p>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+              <div class="card-footer text-center">
+                 <a href="#" class="btn btn-primary w-75">Adopta</a>
+              </div>
+          </div>
+    </div>`;
+}
+
+
 
 //Registro de mascotas
 function registerPet() {
@@ -300,7 +333,7 @@ function menu() {
     "Ingrese una opción: \n1. Agregar una nueva mascota \n2. Actualizar mascota \n3. Eliminar mascota \n4. Listar todas las mascotas \n5. Listar mascotas por dueño"
   );
 
-  switch (option) {
+/*   switch (option) {
     case "1":
       registerPet();
       break;
@@ -322,4 +355,13 @@ function menu() {
   }
 }
 
-menu();
+menu(); */
+
+//Dropdown HTML con forms
+const dropdownElementList =
+document.querySelectorAll(".dropdown-toggle");
+const dropdownList = [...dropdownElementList].map(
+(dropdownToggleEl) => new bootstrap.Dropdown(dropdownToggleEl)
+);
+
+}

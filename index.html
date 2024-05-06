@@ -1,47 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This is a veterinarian and we are her to bring help to your pet and see the animals happy">
+    <meta name="keywords" content=" pablolzdev, Veterinaria Riwi, Riwi, Bootstrap, JavaScript, js HTML, CSS">
+    <meta name="sidedomain" content="https://example.com">
+    <meta name="organization" content="Riwi_Dell">
+    <meta name="author" content="Pablo Andres Lopez Zapata">
+    <meta name="designer" content="Pablo Andres Lopez Zapata">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="15days">
+    <meta name="copyright" content="© 2024. Veterinaria Riwi. Pablo Andres Lopez Zapata">
+    <link rel="shortcut icon" href="./public/icon/favicon.ico" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Vet Riwi</title>
+  </head>
+  <body>
     <div class="b-example-divider"></div>
 
-  <header class="p-3 text-bg-dark">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-        </a>
+    <!-- Header bootstrap -->
+    <header class="p-3 mb-2 text-bg-primary">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+          >
+            <svg
+              class="bi me-2"
+              width="40"
+              height="32"
+              role="img"
+              aria-label="Bootstrap"
+            >
+              <use xlink:href="#bootstrap" />
+            </svg>
+          </a>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-        </ul>
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li><a href="#inicio" class="nav-link px-2 text-white">Home</a></li>
+            <li><a href="#merchandise" class="nav-link px-2 text-white">Merchandise</a></li>
+            <li><a href="#adopt" class="nav-link px-2 text-white">Adopt</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+          </ul>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search.." aria-label="Search">
-        </form>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input
+              type="search"
+              class="form-control form-control-dark text-bg-white"
+              placeholder="Search.."
+              aria-label="Search"
+            />
+          </form>
 
-        <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          <div class="text-end">
+            <button type="button" class="btn btn-outline-light me-2">
+              Login
+            </button>
+            <button type="button" class="btn btn-warning">Sign-up</button>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
+
+    <main>
+      <!-- Bienvenida y descripcion con su formulario de Contacto --> 
+      <section id="#inicio">
+        <div class="b-example-divider"></div>
+        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+          <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-7 text-center text-lg-start">
+              <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">
+                Vet <span class="text-primary-emphasis">RIWI</span>
+              </h1>
+              <p class="fs-4">
+                At Riwi, we are passionate about caring for and protecting our furry friends. We understand how important the health and well-being of your pets are to you, which is why our team of professionals is committed to providing the best veterinary care.
+              </p>
+            </div>
+            <div class="col-lg-5">
+              <img
+                src="./public/img/75984.webp"
+                class="img-fluid rounded-5 mb-4 mb-lg-0"
+                alt="Imagen de Veterinaria"
+              />
+            </div>
+          </div>
+          <!-- Dropdown Button -->
+          <div class="dropdown">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Formulario de Contacto
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start"
+              aria-labelledby="dropdownMenuButton"
+            >
+            <!-- Forms -->
+              <div class="row">
+                <div class="col-lg-12">
+                  <form class="p-4 border rounded-3 bg-body-tertiary">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="name"
+                      />
+                      <label for="floatingInput">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="floatingPhone"
+                        placeholder="Phone Number"
+                      />
+                      <label for="floatingPassword">Phone Number</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="name@example.com"
+                      />
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="name@example.com"
+                      />
+                      <label for="floatingInput">subject</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <textarea
+                        class="form-control"
+                        placeholder="Leave a comment here"
+                        id="floatingTextarea2"
+                        style="height: 100px"
+                      ></textarea>
+                      <label for="floatingTextarea2">Comments</label>
+                    </div>
+                    <div class="checkbox mb-3">
+                      <label>
+                        <input type="checkbox" value="remember-me" /> Remember
+                        me
+                      </label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">
+                      Send
+                    </button>
+                    <hr class="my-4" />
+                    <small class="text-body-secondary"
+                      >By clicking Send, you agree to the terms of use.</small
+                    >
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+<!--  Merchandise section toys and medications -->
+      <section id="#merchandise">
+        <div class="d-md-flex flex-md-equal w-100 justify-content-center align-items-center">
+          <div class="bg-body-tertiary mb-md-3 p-3 pt-md-5 px-md-5 text-center overflow-hidden w-100">
+            <div class="my-3 p-3">
+              <h2 class="display-5">Toys </h2>
+              <p class="lead">And an even wittier subheading.</p>
+            </div>
+            <div class="bg-dark shadow-sm mx-auto ratio ratio-16x9" style="width: 100%; height: 100%; border-radius: 21px 21px 0 0;">
+              <img src="./public/img/top-view-various-colorful-pet-accessories-still-life-concept.webp" alt="toys">
+            </div>
+          </div>
+          <div class="text-bg-primary mb-md-3 p-3 pt-md-5 px-md-5 text-center overflow-hidden w-100">
+            <div class="my-3 py-3">
+              <h2 class="display-5">Medications</h2>
+              <p class="lead">And an even wittier subheading.</p>
+            </div>
+            <div class="bg-dark shadow-sm mx-auto ratio ratio-16x9" style="width: 100%; height: 100%; border-radius: 21px 21px 0 0;">
+              <img src="./public/img/close-up-veterinarian-taking-care-pet.webp" alt="toys">
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+<!-- Adopt section -->
+      <h1 class="text-capitalize text-center bg-primary text-white   p-3 ">Adopta!</h1>
+      <section id="ark" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      </section>
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+      <!-- Inicializar dropdowns de Bootstrap -->
+      <script src="./src/js/GestionVeterinaria.js"></script>
+
+
   
-  <main>
-    <section id="#"></section>
-    <section id="#"></section>
-    <section id="#"></section>
-  </main>
-  <footer></footer>
-  
-</body>
+    </main>
+    <footer></footer>
+  </body>
 </html>
