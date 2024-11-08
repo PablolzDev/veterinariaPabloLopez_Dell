@@ -278,7 +278,7 @@ function listarMascotasPorDueño() {
 }
 
 // Update Pet
-function updatePet() {
+function updatePet(pets) {
   let petName = prompt("Enter the name of the pet you want to update");
   let pet = pets.find((p) => p.name.toLowerCase() === petName.toLowerCase());
   if (pet) {
@@ -289,13 +289,14 @@ function updatePet() {
     pet.weight = parseFloat(newWeight);
     pet.status = newStatus;
     console.log(`The pet ${petName} has been updated.`);
+    console.log("Updated pets list:", pets);
   } else {
     console.log(`A pet with the name ${petName} was not found`);
   }
+  return continuarOperacion(pets);
 }
 
-// Delete Pet
-function deletePet() {
+function deletePet(pets) {
   let petName = prompt("Enter the name of the pet you want to delete");
   let petIndex = pets.findIndex(
     (p) => p.name.toLowerCase() === petName.toLowerCase()
@@ -303,44 +304,47 @@ function deletePet() {
   if (petIndex !== -1) {
     pets.splice(petIndex, 1);
     console.log(`The pet ${petName} has been deleted.`);
+    console.log("Current pets list:", pets);
   } else {
     console.log(`A pet with the name ${petName} was not found`);
   }
+  return continuarOperacion(pets);
 }
 
-// Menu
-function menu() {
+function continuarOperacion(pets) {
+  let continuar = prompt("¿Desea realizar otra operación? (si/no)").toLowerCase();
+  if (continuar === 'si') {
+    return menu(pets);
+  } else {
+    console.log("¡Gracias por usar nuestro sistema!");
+    return pets;
+  }
+}
+
+function menu(pets) {
   let option = prompt(
     "Enter an option: \n1. Add a new pet \n2. Update pet \n3. Delete pet \n4. List all pets \n5. List pets by owner"
   );
 
   switch (option) {
     case "1":
-      registerPet(pets);
-      break;
+      return registerPet(pets);
     case "2":
-      updatePet();
-      break;
+      return updatePet(pets);
     case "3":
-      deletePet();
-      break;
+      return deletePet(pets);
     case "4":
-      listar();
-      break;
+      console.log("Current pets list:", pets);
+      return continuarOperacion(pets);
     case "5":
-      listarMascotasPorDueño();
-      break;
+      listarMascotasPorDueño(pets);
+      return continuarOperacion(pets);
     default:
       console.log("Invalid option");
-      break;
+      return continuarOperacion(pets);
   }
 }
 
-menu();
+//
+menu(pets);
 
-// Dropdown HTML with forms
-const dropdownElementList =
-  document.querySelectorAll(".dropdown-toggle");
-const dropdownList = [...dropdownElementList].map(
-  (dropdownToggleEl) => new bootstrap.Dropdown(dropdownToggleEl)
-);
